@@ -1,0 +1,780 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{72200117-82EF-4E06-A6FC-623EB989214A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HRM</RootNamespace>
+    <AssemblyName>HRM</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>HRM.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\..\HRM 313(PROJECT)\Modern Framework\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="JMetroTextBox">
+      <HintPath>..\..\..\..\HRM 313(PROJECT)\Modern Framework\JControls\JMetroTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="JTextBox">
+      <HintPath>..\..\..\..\HRM 313(PROJECT)\Modern Framework\JTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="JThinButton">
+      <HintPath>..\..\..\..\HRM 313(PROJECT)\Modern Framework\JControls\JThinButton.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employees_Folder\Employee_Attendance_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees_Folder\Employee_Attendance_Report.Designer.cs">
+      <DependentUpon>Employee_Attendance_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login_Notification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_Notification.Designer.cs">
+      <DependentUpon>Login_Notification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setting_Folder\Holiday.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting_Folder\Holiday.Designer.cs">
+      <DependentUpon>Holiday.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setting_Folder\Backup_Database.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting_Folder\Backup_Database.Designer.cs">
+      <DependentUpon>Backup_Database.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employees_Folder\Add_Sched.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees_Folder\Add_Sched.Designer.cs">
+      <DependentUpon>Add_Sched.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connection.cs" />
+    <Compile Include="Leave\Apply_Leave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Leave\Apply_Leave.Designer.cs">
+      <DependentUpon>Apply_Leave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Leave\Manage_Leave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Leave\Manage_Leave.Designer.cs">
+      <DependentUpon>Manage_Leave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setting_Folder\Department.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting_Folder\Department.Designer.cs">
+      <DependentUpon>Department.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee Loan_Folder\Employee Loan_Choose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee Loan_Folder\Employee Loan_Choose.Designer.cs">
+      <DependentUpon>Employee Loan_Choose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee Loan_Folder\Employee_Loan_Cash_Advance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee Loan_Folder\Employee_Loan_Cash_Advance.Designer.cs">
+      <DependentUpon>Employee_Loan_Cash_Advance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee Loan_Folder\Employee_Loan_SSS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee Loan_Folder\Employee_Loan_SSS.Designer.cs">
+      <DependentUpon>Employee_Loan_SSS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee Loan_Folder\Employee_Loan_HDMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee Loan_Folder\Employee_Loan_HDMF.Designer.cs">
+      <DependentUpon>Employee_Loan_HDMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee Loan_Folder\Employee_Loan_Cash_Advance_History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee Loan_Folder\Employee_Loan_Cash_Advance_History.Designer.cs">
+      <DependentUpon>Employee_Loan_Cash_Advance_History.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee Loan_Folder\Employee_Loan_HDMF_History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee Loan_Folder\Employee_Loan_HDMF_History.Designer.cs">
+      <DependentUpon>Employee_Loan_HDMF_History.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee Loan_Folder\Employee_Loan_SSS_History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee Loan_Folder\Employee_Loan_SSS_History.Designer.cs">
+      <DependentUpon>Employee_Loan_SSS_History.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Leave\Leave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Leave\Leave.Designer.cs">
+      <DependentUpon>Leave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Folder\Report_Select.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_Folder\Report_Select.Designer.cs">
+      <DependentUpon>Report_Select.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setting_Folder\Admin_Log_History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting_Folder\Admin_Log_History.Designer.cs">
+      <DependentUpon>Admin_Log_History.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard_Folder\Dashboard2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard_Folder\Dashboard2.Designer.cs">
+      <DependentUpon>Dashboard2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard_Folder\Dashboard3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard_Folder\Dashboard3.Designer.cs">
+      <DependentUpon>Dashboard3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employees_Folder\Employees_Choose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees_Folder\Employees_Choose.Designer.cs">
+      <DependentUpon>Employees_Choose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employees_Folder\Add_Designation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees_Folder\Add_Designation.Designer.cs">
+      <DependentUpon>Add_Designation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setting_Folder\Add_New_Question.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting_Folder\Add_New_Question.Designer.cs">
+      <DependentUpon>Add_New_Question.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add_New_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_New_User.Designer.cs">
+      <DependentUpon>Add_New_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add_New_User_Validate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_New_User_Validate.Designer.cs">
+      <DependentUpon>Add_New_User_Validate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Setting_Account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Setting_Account.Designer.cs">
+      <DependentUpon>Admin_Setting_Account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Update.Designer.cs">
+      <DependentUpon>Admin_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BlurBackGround.cs" />
+    <Compile Include="Employees_Folder\Add_Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees_Folder\Add_Employee.Designer.cs">
+      <DependentUpon>Add_Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employees_Folder\Employee_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees_Folder\Employee_List.Designer.cs">
+      <DependentUpon>Employee_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employees_Folder\Employee_Attendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees_Folder\Employee_Attendance.Designer.cs">
+      <DependentUpon>Employee_Attendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employees_Folder\Employee_Archived.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees_Folder\Employee_Archived.Designer.cs">
+      <DependentUpon>Employee_Archived.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employees_Folder\Employee_DTR_History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees_Folder\Employee_DTR_History.Designer.cs">
+      <DependentUpon>Employee_DTR_History.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employees_Folder\Employee_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees_Folder\Employee_Update.Designer.cs">
+      <DependentUpon>Employee_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forgot_Password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forgot_Password.Designer.cs">
+      <DependentUpon>Forgot_Password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main_Manual_Payroll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_Manual_Payroll.Designer.cs">
+      <DependentUpon>Main_Manual_Payroll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setting_Folder\Pending_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting_Folder\Pending_User.Designer.cs">
+      <DependentUpon>Pending_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employees_Folder\Employee_Schedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees_Folder\Employee_Schedule.Designer.cs">
+      <DependentUpon>Employee_Schedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setting_Folder\Set_Up_Logo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting_Folder\Set_Up_Logo.Designer.cs">
+      <DependentUpon>Set_Up_Logo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report_Folder\Salary_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_Folder\Salary_Report.Designer.cs">
+      <DependentUpon>Salary_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setting_Folder\Setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting_Folder\Setting.Designer.cs">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Folder\Thirteen_Month_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_Folder\Thirteen_Month_Report.Designer.cs">
+      <DependentUpon>Thirteen_Month_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Worker_Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Worker_Details.Designer.cs">
+      <DependentUpon>Worker_Details.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees_Folder\Employee_Attendance_Report.resx">
+      <DependentUpon>Employee_Attendance_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_Notification.resx">
+      <DependentUpon>Login_Notification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting_Folder\Holiday.resx">
+      <DependentUpon>Holiday.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting_Folder\Backup_Database.resx">
+      <DependentUpon>Backup_Database.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees_Folder\Add_Sched.resx">
+      <DependentUpon>Add_Sched.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Leave\Apply_Leave.resx">
+      <DependentUpon>Apply_Leave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Leave\Manage_Leave.resx">
+      <DependentUpon>Manage_Leave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting_Folder\Department.resx">
+      <DependentUpon>Department.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee Loan_Folder\Employee Loan_Choose.resx">
+      <DependentUpon>Employee Loan_Choose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee Loan_Folder\Employee_Loan_Cash_Advance.resx">
+      <DependentUpon>Employee_Loan_Cash_Advance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee Loan_Folder\Employee_Loan_SSS.resx">
+      <DependentUpon>Employee_Loan_SSS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee Loan_Folder\Employee_Loan_HDMF.resx">
+      <DependentUpon>Employee_Loan_HDMF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee Loan_Folder\Employee_Loan_Cash_Advance_History.resx">
+      <DependentUpon>Employee_Loan_Cash_Advance_History.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee Loan_Folder\Employee_Loan_HDMF_History.resx">
+      <DependentUpon>Employee_Loan_HDMF_History.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee Loan_Folder\Employee_Loan_SSS_History.resx">
+      <DependentUpon>Employee_Loan_SSS_History.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Leave\Leave.resx">
+      <DependentUpon>Leave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Folder\Report_Select.resx">
+      <DependentUpon>Report_Select.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting_Folder\Admin_Log_History.resx">
+      <DependentUpon>Admin_Log_History.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard_Folder\Dashboard2.resx">
+      <DependentUpon>Dashboard2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard_Folder\Dashboard3.resx">
+      <DependentUpon>Dashboard3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees_Folder\Employees_Choose.resx">
+      <DependentUpon>Employees_Choose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees_Folder\Add_Designation.resx">
+      <DependentUpon>Add_Designation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting_Folder\Add_New_Question.resx">
+      <DependentUpon>Add_New_Question.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_New_User.resx">
+      <DependentUpon>Add_New_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_New_User_Validate.resx">
+      <DependentUpon>Add_New_User_Validate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Setting_Account.resx">
+      <DependentUpon>Admin_Setting_Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Update.resx">
+      <DependentUpon>Admin_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees_Folder\Add_Employee.resx">
+      <DependentUpon>Add_Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees_Folder\Employee_List.resx">
+      <DependentUpon>Employee_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees_Folder\Employee_Attendance.resx">
+      <DependentUpon>Employee_Attendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees_Folder\Employee_Archived.resx">
+      <DependentUpon>Employee_Archived.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees_Folder\Employee_DTR_History.resx">
+      <DependentUpon>Employee_DTR_History.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees_Folder\Employee_Update.resx">
+      <DependentUpon>Employee_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forgot_Password.resx">
+      <DependentUpon>Forgot_Password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_Manual_Payroll.resx">
+      <DependentUpon>Main_Manual_Payroll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting_Folder\Pending_User.resx">
+      <DependentUpon>Pending_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees_Folder\Employee_Schedule.resx">
+      <DependentUpon>Employee_Schedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting_Folder\Set_Up_Logo.resx">
+      <DependentUpon>Set_Up_Logo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report_Folder\Salary_Report.resx">
+      <DependentUpon>Salary_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting_Folder\Setting.resx">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Folder\Thirteen_Month_Report.resx">
+      <DependentUpon>Thirteen_Month_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Worker_Details.resx">
+      <DependentUpon>Worker_Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loader - Copy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Loader-gif-transparent-background-11-GIF-Images-Download.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ForLogIn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ForLogIn2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blankimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newlogout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newlogout3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\91182273_2610833585691681_3698898063780216832_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gnome_panel_force_quit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employees.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_Print_preview_1323071.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_documents_512.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vista_icons_09.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_customer_512.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_agt_home_17821.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_Group_Meeting_Light_80844.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_open_safety_box_50842.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_sales-report_49617.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_about_48533.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_kfm_home_18010.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_eccomerce_-_discount_3440923.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_farmer-03_2140052.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_Alarm_49227.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_man16_1934221.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_workplace_1936905.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_Information_16x16_229134.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_Statistic_2921803.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart-diagram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User group1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_home_71865.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_open_safety_box_45128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_product-sales-report_49607.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_Info_10584.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_setting_1214651.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_tools_1287509.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_wrench_416405.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_construction-industry-building-38_4137155.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_construction-industry-building-09_4137171.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PayrollSystem Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\91182273_2610833585691681_3698898063780216832_n1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_preferences-calendar-and-tasks_24246.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_03_61467.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_Print_preview_132307.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_Home_56264.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
